@@ -1,5 +1,4 @@
 #include <stdio.h>
-//설탕 봉지 구하기 문제
 int main(){
 	int n,result,i,j;
 	scanf("%d", &n);
