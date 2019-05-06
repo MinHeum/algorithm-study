@@ -53,5 +53,6 @@ dkms.conf
 
 #for Intellij
 /src
+/out
 BOJ_Practice.iml
 /.idea
