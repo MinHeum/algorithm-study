@@ -11,6 +11,7 @@ for i in range (1, N+1):
     sum += arr[i]
     if sum < (i * (i-1)) // 2:
         answer = -1
-if sum != n * (n+1) // 2
+if sum != (N * (N-1))//2:
+    answer = -1
 
 print(answer)
