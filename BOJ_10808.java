@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main {
+public class BOJ_10808 {
     public static void main (String argv[]) {
         Scanner sc = new Scanner(System.in);
         String s = sc.nextLine();

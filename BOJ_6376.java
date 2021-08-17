@@ -1,4 +1,4 @@
-public class BOJ_6376 {
+public class BOJ_6376   {
     public static void main(String args[]){
         System.out.println("n e");
         System.out.println("- -----------");

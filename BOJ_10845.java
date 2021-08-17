@@ -1,7 +1,7 @@
 import java.util.LinkedList;
 import java.util.Scanner;
 
-class Main{
+class BOJ_10845{
     public static void main(String asgs[]){
         LinkedList<Integer> que = new LinkedList<>();
         Scanner sc = new Scanner(System.in);
