@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 // BOJ_5622.java
-public class Main {
+public class BOJ_5622 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int result = 0;

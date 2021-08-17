@@ -1,10 +1,8 @@
-package com.solved;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Main {
+public class BOJ_1810 {
     static int n, r, numbers[], inputs[] = new int[9];
 
     public static void main(String[] args) throws IOException {

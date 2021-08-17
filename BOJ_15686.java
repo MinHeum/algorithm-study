@@ -1,11 +1,9 @@
-package com.solved;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.*;
 
-public class Main {
+public class BOJ_15686 {
     static int N, M, answer;
     static ArrayList<int[]> houses, chickens;
     static int[][] selectedChickens;

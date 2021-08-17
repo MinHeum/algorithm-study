@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 // BOJ_4673.java
-public class Main {
+public class BOJ_4673 {
     public static void main(String[] args) {
         List<Long> lst = new ArrayList<>();
         lst.add((long)1);

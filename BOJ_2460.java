@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main {
+public class BOJ_2460 {
     public static void main (String argv[]) {
         int[][] arr = new int[10][3];
         Scanner sc = new Scanner(System.in);

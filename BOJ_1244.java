@@ -1,9 +1,7 @@
-package com.solved;
-
 import java.io.IOException;
 import java.util.Scanner;
 
-public class Main {
+public class BOJ_1244 {
 	
 	static int N;
 	static int[] arr;

@@ -44,7 +44,7 @@ class Stat{
         System.out.println(1*(sumHp) + 5*(sumMp) + 2*(sumAtk) + 2*(sumDef));
     }
 }
-public class Main {
+public class BOJ_12790 {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         int n = Integer.parseInt(sc.next());
