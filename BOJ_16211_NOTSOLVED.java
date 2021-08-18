@@ -40,8 +40,8 @@ class BOJ_16211_NOTSOLVED{
             func(day+1, 1, chance * good_bad);
         }
         else{
-            func(day+1, 0, bad_good);
-            func(day+1, 1, bad_bad);
+            func(day+1, 0, chance * bad_good);
+            func(day+1, 1, chance * bad_bad);
         }
     }
 }
