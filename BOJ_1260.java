@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.StringTokenizer;
 
-public class Main_S2_1260_박민흠 {
+public class BOJ_1260 {
     static int N, M, V;
     static boolean[] visited;
     static int[][] adj;
