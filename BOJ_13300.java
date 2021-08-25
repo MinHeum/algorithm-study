@@ -1,21 +1,12 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.Arrays;
-import java.util.StringTokenizer;
-import java.math.*;
+import java.util.Scanner;
 
 public class BOJ_13300 {
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = new StringTokenizer(br.readLine());
-        int N = Integer.parseInt(st.nextToken());
-        int K = Integer.parseInt(st.nextToken());
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int N = sc.nextInt(); int K = sc.nextInt();
         int[] arr = new int[12];
         for (int i = 0; i < N; i++) {
-            st = new StringTokenizer(br.readLine());
-            int isBoy = Integer.parseInt(st.nextToken());
-            int num = Integer.parseInt(st.nextToken());
+            int isBoy = sc.nextInt(); int num = sc.nextInt();
             arr[(num-1)*2 + isBoy] += 1;
         }
         int answer = 0;
