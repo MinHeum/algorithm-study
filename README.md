@@ -1,2 +1,1 @@
-# BOJ_Practice
-백준 문제풀이...
+# Algorithm Study
