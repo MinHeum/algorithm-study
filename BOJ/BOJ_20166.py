@@ -1,32 +1,41 @@
-N, M, K = map(int, input().split())
+from sys import stdin, setrecursionlimit
 
-board = [list(input()) for _ in range(N)]
-words = [input() for _ in range(K)]
+# 재귀 깊이 설정
+setrecursionlimit(10 ** 9)
 
-answer = {}
+n, m, k = map(int, stdin.readline().split())
+answer_dict = {}
+words = []
+dx = [1, 0, -1, 0, 1, 1, -1, -1]
+dy =  [0, 1, 0, -1, -1, 1, 1, -1]
+ans_list = []
 
-for word in words:
-    answer[word] = 0
+for _ in range(n):
+    words.append(list(stdin.readline().rstrip()))
 
-ROW = len(board)
-COL = len(board[0])
-darr = [(0, 1), (0, -1), (1, 0), (-1, 0), (1, -1), (-1, -1), (1, 1), (-1, 1)]
+for _ in range(k):
+    data = stdin.readline().rstrip()
+    answer_dict[data] = 0
+    ans_list.append(data)
 
-def dfs(x, y, word, idx):
-    if idx == len(word):
-        return 1
-    cnt = 0
-    for dx, dy in darr:
-        nx, ny = (x + dx) % ROW, (y + dy) % COL
-        if board[nx][ny] == word[idx]:
-            cnt += dfs(nx, ny, word, idx + 1)
-    return cnt
 
-for i in range(N):
-    for j in range(M):
-        for word in words:
-            if board[i][j] == word[0]:
-                answer[word] += dfs(i, j, word, 1)
+def dfs(x, y, cnt, word):
+    if cnt > 5:
+        return
 
-for word in words:
-    print(answer[word])
+    if word in answer_dict:
+        answer_dict[word] += 1
+
+    for i in range(8):
+        nx, ny = (x + n + dx[i]) % n, (y + m + dy[i]) % m
+        dfs(nx, ny, cnt + 1, word + words[nx][ny])
+
+
+for i in range(n):
+    for j in range(m):
+        start = ''
+        dfs(i, j, 1, start + words[i][j])
+
+for k in ans_list:
+    if k in answer_dict:
+        print(answer_dict[k])
