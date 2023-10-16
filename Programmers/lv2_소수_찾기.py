@@ -1,15 +1,17 @@
 from itertools import permutations
 
 def solution(numbers):
-    def is_prime(n):
-        if n == 0 or n == 1:
-            return False
-        for i in range(2, n):
-            if n % i == 0:
-                return False
-        return True
+    def eratos(n):
+        sieve = [True] * (n + 1)
+        sieve[0] = sieve[1] = False
+
+        for i in range(2, int(n ** 0.5) + 1):
+            if sieve[i]:
+                for j in range(i + i, n + 1, i):
+                    sieve[j] = False
+
+        return sieve
     
-    answer = 0
 
     numbers = list(numbers)
 
@@ -20,8 +22,12 @@ def solution(numbers):
         for j in permutations(numbers, i):
             all_numbers.add(int(''.join(j)))
 
-    for n in all_numbers:
-        if is_prime(n):
+    # 소수 판별
+    sieve = eratos(max(all_numbers))
+    answer = 0
+
+    for num in all_numbers:
+        if sieve[num]:
             answer += 1
 
     return answer
